@@ -959,7 +959,7 @@ header{
 .navbar li:hover{
     background-color: #dda42a!important;
 }
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:768px){
     .logo{
         position: absolute;
         left: 0;
