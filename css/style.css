@@ -836,7 +836,7 @@ table {
 2. HEADING & TITLE 
 ======================================*/
 
-h1, 
+/* h1, 
 h2, 
 h3, 
 h4, 
@@ -906,8 +906,130 @@ h6 {
   color:#171f2c;
   font-weight: normal;
   margin-bottom:10px;
+} */
+.navbar .openNav span{
+	display: none;
 }
 
+header{
+	position: absolute;
+    display: flex;
+    width: 80%;
+    margin: 0 10%;
+	z-index: 9;
+	margin-top: 30px;
+	color: #e6e2e2;
+	font-weight: 500;
+}
+.logo{
+    width: 15%;
+}
+.logo img{
+    width: 60px;
+	position: fixed;
+}
+.navbar{
+    width: 80%;
+    display: flex;
+    justify-content: right;
+	border: 2px solid #633eeb;
+	border-radius: 10px;
+	font-size: 1.5em;
+}
+.navbar ul{
+    padding: 0;
+    margin: 0%;
+    list-style: none;
+    display: inline-block;
+}
+.navbar .otheroption{
+    width: 35%;
+    text-align: right;
+}
+.navbar .menu{
+    width: 80%;
+    text-align: center;
+}
+.navbar li{
+    padding: 15px;
+    display: inline-block;
+    transition: 0.5s;
+    position: relative;
+}
+.navbar li:hover{
+    background-color: #dda42a!important;
+}
+@media only screen and (max-width:1024px){
+    .logo{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .navbar{
+        position: fixed;
+        width: 35vw;
+        background-color: #661fd6;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        display: block;
+        transition: 0.5s;
+        transform: translate(100%,0);
+    }
+    .navbar .openNav{
+        display: block;
+        position: absolute;
+        right: 100%;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        background-color: #2b043577;
+        padding: 10px;
+    }
+    .navbar .openNav span{
+        display: block;
+        background-color: #000;
+        width: 50px;
+        height: 3px;
+        margin: 5px 0;
+        transition: 1s;
+    }
+    .navbar:has(input[name="openNav"]:checked){
+        transform: translate(0,0);
+    }
+    .navbar:has(input[name="openNav"]:checked) .openNav span:nth-child(2){
+        opacity: 0;
+        transition: 0s;
+    }
+    .navbar:has(input[name="openNav"]:checked) .openNav span:nth-child(1){
+        transform: rotate(45deg) translate(6px, 5px);
+    }
+    .navbar:has(input[name="openNav"]:checked) .openNav span:nth-child(3){
+        transform: rotate(-45deg) translate(6px, -5px);
+    }
+    input[type="checkbox"] .openNav{
+        display: none;
+    }
+	.navbar .openNav span{
+		width: 100%;
+		mar
+	}
+    .navbar li{
+        display: block;
+        position: unset;
+        border-bottom: 2px solid #2b043577;
+        font-weight: 500;
+    }
+    .navbar .otheroption,
+    .navbar .menu{
+        width: 100%;
+        text-align: left;
+    }
+    .navbar .menu li:hover{
+        background-color: unset!important;
+        border-bottom: 5px solid #d220e9;
+    }
+}
 
 /*======================================
 3. TEXT & PARAGRAPH 
@@ -5488,7 +5610,7 @@ input[type=radio] + label:before {
 	background-color: #fff;
 	border: 2px solid #b6b7b8;
 	border-radius: 0px;
-	content: "";
+	content: ;
 	display: inline-block;
 	height: 16px;
 	line-height: 1;
@@ -5499,15 +5621,15 @@ input[type=radio] + label:before {
 	width: 16px; 
 }
 input[type=checkbox] + label:after {
-	color: #fff;
-	content: "\f00c";
-	font-family: FontAwesome;
+	/* color: #fff; */
+	/* content: "\f00c"; */
+	/* font-family: FontAwesome; */
 	font-size: 0px;
 	-webkit-font-smoothing: antialiased;
 	left: 6px;
 	position: absolute;
 	top: 7px;
-	transition: all linear 0.1s; 
+	/* transition: all linear 0.1s;  */
 }
 input[type=checkbox]:checked + label:before {
 	border-width: 7px;
@@ -12817,4 +12939,9 @@ ol.commentlist li::after {
 
 .rev-hide-timer .tp-bannertimer{
 	display:none;
+}
+
+/* /////////////...........Btc minings............/////////// */
+.plan {
+	
 }
